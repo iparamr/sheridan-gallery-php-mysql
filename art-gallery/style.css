@@ -1,0 +1,176 @@
+body {
+	background-color: #C9C9C9;
+}
+.links {
+	color: #01AFC8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+a.links:link {
+	color: #01AFC8;
+	text-decoration: none;
+}
+a.links:visited {
+	color: #01AFC8;
+	text-decoration: none;
+}
+a.links:hover {
+	color: #01AFC8;
+	text-decoration: underline;
+}
+a.links:active {
+	color: #01AFC8;
+	text-decoration: none;
+}
+.linksDivider {
+	color: #CCCCCC;
+	font-size: 14px;
+	font-weight: bold;
+}
+.imgTitle {
+	color: #105AB9;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.backLink {
+	color: #105AB9;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+a.backLink:link {
+	color: #105AB9;
+	text-decoration: none;
+}
+a.backLink:visited {
+	color: #105AB9;
+	text-decoration: none;
+}
+a.backLink:hover {
+	color: #105AB9;
+	text-decoration: underline;
+}
+a.backLink:active {
+	color: #105AB9;
+	text-decoration: none;
+}
+.views {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+.tableHead {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.content {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-weight: normal;
+}
+.commentsTitle {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.commentsInput {
+	color: #333333;
+	width: 400px;
+	height: 80px;
+	font-size: 12px;	
+	font-family: Arial, Helvetica, sans-serif;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	padding: 2px;
+}
+.comments {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+.sendComments {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.statusMessage {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.error {
+	color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	background-color:#DC143C;
+	padding: 3px;
+}
+.lineBreak {
+	margin-top:10px;
+	margin-bottom:10px;
+	border:0px;
+	border-top:1px dotted #999;
+}
+.footer{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.checkbox{
+	width: 14px;
+	height: 14px;
+}
+.updateTextfield{
+	color: #333333;
+	width: 300px;
+	height: 22px;
+	font-size: 12px;	
+	font-family: Arial, Helvetica, sans-serif;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	font-weight: normal;
+	padding: 2px;
+}
+.updateText {
+	color: #1D1D1D;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.logOut{
+	color: #FFFFFF;
+	padding: 2px;
+	padding-left:5px;
+	padding-right:5px;
+	font-size: 11px;	
+	font-family: Arial, Helvetica, sans-serif;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	font-weight: normal;
+	background-color:#105AB9;
+}
+.footerBox{
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-style: dashed;
+	border-color: #000000;
+}
