@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ?>
 <?php
 
-if ($_COOKIE['loginGallery'] == true) {
+if (isset($_COOKIE['loginGallery']) && $_COOKIE['loginGallery'] == true) {
 
 ?>
   <html>

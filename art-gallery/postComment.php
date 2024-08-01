@@ -1,6 +1,6 @@
 <?php
 ob_start(); // Start output buffering
-include 'partials/header.php';
+include 'partials/header-light.php';
 ?>
 <?php
 include 'partials/db-connect.php';
@@ -64,5 +64,5 @@ if (isset($_POST['addComment']) && ($_COOKIE['chkComment'] != $_POST['commentInp
 		</td>
 	</tr>
 	<?php
-	include 'partials/footer.php';
+	include 'partials/footer-light.php';
 	?>

@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 <?php
 
-if ($_COOKIE['loginGallery'] == true) {
+if (isset($_COOKIE['loginGallery']) && $_COOKIE['loginGallery'] == true) {
 
 	$imageID = $_POST['imageID'];
 	$title = $_POST['title'];

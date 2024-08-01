@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'partials/header-light.php';
 ?>
 
 <tr>
@@ -111,5 +111,5 @@ include 'partials/header.php';
 	</td>
 </tr>
 <?php
-include 'partials/footer.php';
+include 'partials/footer-light.php';
 ?>

@@ -1,8 +1,8 @@
 <tr>
-    <td height="30" colspan="5" bgcolor="#01AFC8"><span class="tableHead">Fine Art</span></td>
+    <td height="30" colspan="5" bgcolor="#01AFC8"><span class="tableHead"><?= $pageHeading ?></span></td>
 </tr>
 <?php
-$numRecords = mysqli_num_rows($result2);
+$numRecords = mysqli_num_rows($result);
 $cols = 5;
 $rows = ceil($numRecords / $cols);
 $index = 0;
@@ -12,7 +12,7 @@ for ($i = 1; $i <= $rows; $i++) {
     <tr>
         <?php
         for ($j = 1; $j <= $cols; $j++) {
-            $row = mysqli_fetch_assoc($result2);
+            $row = mysqli_fetch_assoc($result);
 
             $thumbnail = $row['thumbnail'];
             $picture = $row['picture'];

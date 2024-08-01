@@ -1,7 +1,7 @@
 <?php
 ob_start(); // Start output buffering
 $isAdmin = true;
-include 'partials/header-main.php';
+include 'partials/header.php';
 ?>
 
 <?php
@@ -96,4 +96,4 @@ if (isset($_POST['submitLogin'])) {
 	}
 }
 ?>
-<?php include 'partials/footer-main.php'; ?>
+<?php include 'partials/footer.php'; ?>

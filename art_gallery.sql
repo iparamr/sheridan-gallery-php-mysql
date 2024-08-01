@@ -1,13 +1,21 @@
 -- phpMyAdmin SQL Dump
--- version 2.11.0
--- http://www.phpmyadmin.net
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 07, 2007 at 11:54 AM
--- Server version: 5.0.45
--- PHP Version: 5.2.4
+-- Host: db
+-- Generation Time: Aug 01, 2024 at 12:19 AM
+-- Server version: 8.4.2
+-- PHP Version: 8.2.8
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `art_gallery`
@@ -19,11 +27,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `category`
 --
 
-CREATE TABLE IF NOT EXISTS `category` (
-  `cat_id` int(11) NOT NULL auto_increment,
-  `cat_name` varchar(50) NOT NULL,
-  PRIMARY KEY  (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+CREATE TABLE `category` (
+  `cat_id` int NOT NULL,
+  `cat_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -39,12 +46,11 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 -- Table structure for table `comments`
 --
 
-CREATE TABLE IF NOT EXISTS `comments` (
-  `comment_id` int(11) NOT NULL auto_increment,
-  `image_id` int(11) NOT NULL,
-  `comment` text NOT NULL,
-  PRIMARY KEY  (`comment_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+CREATE TABLE `comments` (
+  `comment_id` int NOT NULL,
+  `image_id` int NOT NULL,
+  `comment` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `comments`
@@ -57,7 +63,7 @@ INSERT INTO `comments` (`comment_id`, `image_id`, `comment`) VALUES
 (32, 8, 'Ne quando ridens pri, qui enim choro cu, et dolores vivendum pro. His ipsum praesent ei. Ubique maluisset concludaturque vel cu, detracto lucilius iracundia sit eu. Ea vide volutpat vix. No latine vituperata his, te duo quot accusamus assueverit.'),
 (33, 9, 'Eu per dolore epicurei. Sit at everti fabellas. Lobortis scripserit ex qui. Per detracto pertinacia ut. Eu ludus facete sed, vel vocent docendi ne, dicit errem id ius.'),
 (34, 2, 'Excellent work.'),
-(44, 2, 'Yes, That''s all done using scanned objects.'),
+(44, 2, 'Yes, That\'s all done using scanned objects.'),
 (45, 2, 'Did you scan the knife?'),
 (46, 2, 'Blood looks so real.'),
 (49, 3, 'Is that all scannned?'),
@@ -70,15 +76,14 @@ INSERT INTO `comments` (`comment_id`, `image_id`, `comment`) VALUES
 -- Table structure for table `image`
 --
 
-CREATE TABLE IF NOT EXISTS `image` (
-  `image_id` int(11) NOT NULL auto_increment,
+CREATE TABLE `image` (
+  `image_id` int NOT NULL,
   `title` varchar(50) NOT NULL,
   `thumbnail` varchar(200) NOT NULL,
   `picture` varchar(200) NOT NULL,
-  `views` int(10) NOT NULL,
-  `cat_id` int(11) NOT NULL,
-  PRIMARY KEY  (`image_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+  `views` int NOT NULL,
+  `cat_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `image`
@@ -143,10 +148,9 @@ INSERT INTO `image` (`image_id`, `title`, `thumbnail`, `picture`, `views`, `cat_
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `user_name` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  PRIMARY KEY  (`user_name`)
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -155,3 +159,58 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`user_name`, `password`) VALUES
 ('admin', 'sheridan');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
+-- Indexes for table `image`
+--
+ALTER TABLE `image`
+  ADD PRIMARY KEY (`image_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_name`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cat_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `comment_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `image`
+--
+ALTER TABLE `image`
+  MODIFY `image_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

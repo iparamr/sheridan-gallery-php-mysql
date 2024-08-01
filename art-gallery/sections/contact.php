@@ -1,5 +1,5 @@
 <tr>
-    <td height="30" colspan="5" bgcolor="#01AFC8"><span class="tableHead">Contact</span></td>
+    <td height="30" colspan="5" bgcolor="#01AFC8"><span class="tableHead"><?= $pageHeading ?></span></td>
 </tr>
 <tr>
     <td height="30" colspan="5" align="center">
